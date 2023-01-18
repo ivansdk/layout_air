@@ -1,0 +1,144 @@
+.people {
+    padding: 148px 0 148px 0;
+    &__text-block {
+        max-width: 205px;
+    }
+
+    &__cards {
+        margin-top: 85px;
+        display: grid;
+        grid-template-columns: repeat(3, 362px);
+        @include phones{
+            gap: 24px;
+            grid-template-columns: repeat(1, 100%);
+        }
+        @include tablets{
+            gap: 30px;
+            grid-template-columns: repeat(1, 100%);
+        }
+        @include desktops{
+            gap: 20px;
+            grid-template-columns: repeat(3, 292px);
+        }
+        @include largeDesktops{
+            gap: 30px;
+            grid-template-columns: repeat(3, 362px);
+        }
+
+    }
+
+    &__card {
+        min-height: 494px;
+        padding: 32px;
+        background: white;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include phones{
+            min-height: 456px;
+        }
+        @include tablets{
+            min-height: 478px;
+        }
+        @include desktops{
+            min-height: 456px;
+        }
+        @include largeDesktops{
+            min-height: 494px;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+    }
+
+    &__img {
+        position: relative;
+        z-index: 2;
+        width: 140px;
+        height: 140px;
+
+        img{
+            border-radius: 100%;
+            width: 100%;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            transform: rotate(-60deg);
+            top: 0;
+            left: -35%;
+            z-index: -1;
+            display: block;
+            width: 139px;
+            height: 56px;
+            background: $main-color;
+            border-radius: 12px;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            transform: rotate(-60deg);
+            top: 60%;
+            left: 35%;
+            z-index: -1;
+            display: block;
+            width: 139px;
+            height: 56px;
+            background: $main-color;
+            border-radius: 12px;
+        }
+    }
+
+    &__text {
+        position: relative;
+        margin-top: 56px;
+        width: 250px;
+        font-family: 'Open Sans';
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 150%;
+        text-align: center;
+        color: #6C788B;
+        &::after{
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            width: 21px;
+            height: 17px;
+            background: url('../icons/quote.svg');
+        }
+    }
+
+    &__name {
+        font-family: 'Open Sans';
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 150%;
+        text-align: center;
+        color: #253757;
+        margin-top: 16px;
+    }
+
+    &__profession {
+        margin-top: 5px;
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #C0CDD7;
+    }
+}

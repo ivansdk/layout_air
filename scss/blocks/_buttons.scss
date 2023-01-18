@@ -1,0 +1,10 @@
+.btn {
+    font-family: "Poppins", sans-serif;
+    background: $main-color;
+    border-radius: 8px;
+    color: #fff;
+    transition: all 0.3s;
+    &:hover{
+        background:#144ED5;
+    }
+}
