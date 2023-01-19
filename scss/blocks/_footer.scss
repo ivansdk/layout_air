@@ -106,9 +106,11 @@
         &:last-child{
             margin-right: 0;
         }
-        &:hover{
-            path{
-                fill: $main-color;
+        @include desktops{
+            &:hover{
+                path{
+                    fill: $main-color;
+                }
             }
         }
     }

@@ -4,7 +4,9 @@
     border-radius: 8px;
     color: #fff;
     transition: all 0.3s;
-    &:hover{
-        background:#144ED5;
+    @include desktops{
+        &:hover{
+            background:#144ED5;
+        }
     }
 }

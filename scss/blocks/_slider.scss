@@ -40,8 +40,10 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-        &:hover{
-            background: rgb(207, 207, 207);
+        @include desktops{
+            &:hover{
+                background: rgb(207, 207, 207);
+            }
         }
         &:active{
             transform: scale(0.9);

@@ -120,8 +120,10 @@
         border-radius: 100%;
         background: $main-color;
         transition: all 0.2s;
-        &:hover{
-            transform: scale(1.1);
+        @include desktops{
+            &:hover{
+                transform: scale(1.1);
+            }
         }
     }
 

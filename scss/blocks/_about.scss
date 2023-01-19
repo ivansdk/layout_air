@@ -14,7 +14,7 @@
             margin: 0 auto;
             text-align: center;
             @include phones{
-                max-width: 260px;
+                width: 100%;
             }
             @include tablets{
                 max-width: 560px;
