@@ -1,0 +1,21 @@
+.text-block {
+
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #C0CDD7;
+    }
+
+    &__subtitle {
+        margin-top: 16px;
+        line-height: 130%;
+    }
+
+    &__descr {
+        margin-top: 24px;
+    }
+}

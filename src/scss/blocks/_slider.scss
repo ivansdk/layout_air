@@ -1,0 +1,81 @@
+.slider {
+    padding: 48px;
+    display: flex;
+    align-items: flex-end;
+    &__content{
+        display: flex;
+        @include desktops{
+            align-items: center;
+        }
+        @include phonesAndTablets{
+            display: block;
+        }
+    }
+    &__btns {
+        min-width: 80px;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 24px;
+        @include phonesAndTablets{
+            justify-content: unset;
+            margin-right: 0;
+        }
+    }
+    &__prev-btn, &__next-btn{
+        display: inline-block;
+        position: relative;
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        transition: background 0.2s;
+        @include phonesAndTablets{
+            margin-right: 13px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        @include desktops{
+            &:hover{
+                background: rgb(207, 207, 207);
+            }
+        }
+        &:active{
+            transform: scale(0.9);
+        }
+    }
+
+    &__text {
+        max-width: 264px;
+        @include phonesAndTablets{
+            margin-top: 16px;
+        }
+    }
+
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+    }
+
+    &__descr {
+        margin-top: 10px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: #FFFFFF;
+
+    }
+}

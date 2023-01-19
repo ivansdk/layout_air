@@ -1,0 +1,42 @@
+.job {
+    min-height: 695px;
+    padding: 200px 0 230px 0;
+    background-color: white;
+    background-image: url('../img/shapes.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    @include phones{
+        background-image: none;
+        padding: 72px 0;
+    }
+    &__wrapper{
+        display: block;
+        margin: 0 auto;
+        max-width: 754px;
+        text-align: center;
+        @include phones{
+            max-width: unset;
+        }
+    }
+    &__title{
+        @include phones{
+           font-size: 44px;
+        }
+    }
+
+    &__descr {
+        margin-top: 24px;
+        @include phones{
+            font-size: 22px;
+         }
+    }
+
+    &__btn {
+        margin-top: 64px;
+        width: 264px;
+        min-height: 56px;
+        @include phones{
+            margin-top: 56px;
+         }
+    }
+}
