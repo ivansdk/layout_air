@@ -1,0 +1,36 @@
+.about {
+    @include phones{
+        min-height: 645px;
+        padding: 120px 0;
+    }
+    @include tablets{
+        min-height: 540px;
+        padding: 148px 0;
+    }
+    @include desktops{
+        min-height: 505px;
+    }
+        &__wrapper{
+            margin: 0 auto;
+            text-align: center;
+            @include phones{
+                width: 100%;
+            }
+            @include tablets{
+                max-width: 560px;
+            }
+            @include desktops{
+                max-width: 715px;
+            }
+        }
+
+		&__descr {
+            margin-top: 16px;
+            @include phones{
+                font-size: 22px;
+            }
+            @include tablets{
+                font-size: 24px;
+            }
+		}
+}

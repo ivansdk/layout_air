@@ -1,0 +1,162 @@
+.footer {
+    min-height: 870px;
+    margin-top: -30px;
+    background: $bg-color;
+    padding: 180px 0 80px 0;
+    border-radius: 30px 30px 0 0;
+    @include phones{
+        padding: 72px 0 80px 0;
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 460px 362px;
+        grid-template-rows: auto;
+        grid-auto-rows:auto;
+        @include phones{
+            column-gap: 0px;
+            row-gap: 120px;
+            grid-template-columns:362px;
+        }
+        @include tablets{
+            column-gap: 98px;
+            row-gap: 120px;
+            grid-template-columns:362px;
+        }
+        @include desktops{
+            grid-template-columns: 460px 362px;
+        }
+        @include largeDesktops{
+            column-gap: 225px;
+            grid-template-columns: 460px 362px;
+        }
+        @media (max-width: 415px){
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        color: white;
+    }
+
+    &__input{
+        position: relative;
+        margin-top: 48px;
+        &:first-child{
+            margin-top: 56px;
+        }
+        background: transparent;
+        border-bottom: 1px solid white;
+        padding-bottom: 16px;
+        font-size: 15px;
+        @include placeholder{
+            color: #FFFFFF;
+            opacity: 0.7;
+        }
+    }
+
+    &__btn {
+        margin-top: 80px;
+        width: 264px;
+        height: 56px;
+    }
+
+
+    &__subtitle {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        opacity: 0.5;
+        margin-top: 48px;
+        &:first-child{
+            margin-top: 56px;
+        }
+    }
+
+    &__text{
+        margin-top: 8px;
+        font-family: 'Open Sans';
+        font-size: 24px;
+    }
+
+    &__address {
+        font-style: normal;
+    }
+
+    &__socials-block {
+        display: flex;
+        margin-top: 21px;
+    }
+
+    &__social {
+        margin-right:45px;
+        transition: all 0.2s;
+        &:first-child{
+            margin-left: 8px;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+        @include desktops{
+            &:hover{
+                path{
+                    fill: $main-color;
+                }
+            }
+        }
+    }
+    &__nav{
+        margin-top: 121px;
+        @include phones{
+            flex-direction: column;
+            margin-top: 144px;
+        }
+        @include tablets{
+            flex-direction: column;
+        }
+        @include desktops{
+        justify-content: space-between;
+        flex-direction: row;
+        }
+    }
+    &__list{
+        @include phonesAndTablets{
+            align-self: start;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 24px;
+        }
+        @include desktops{
+            display: flex;
+        }
+        @media (max-width: 640px){
+            display: block;
+            margin-top: 50px;
+        }
+    }
+    &__logo{
+        @include phonesAndTablets{
+            align-self: start;
+        }
+        @include desktops{
+            align-self: unset;;
+        }
+    }
+    &__item{
+        margin-right: 40px;
+        @media (max-width: 640px){
+            margin-right: 0px;
+            margin-top: 24px;
+        }
+    }
+}
+

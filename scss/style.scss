@@ -1,0 +1,62 @@
+@import 'utils/nullstyle';
+@import 'utils/variables';
+@import 'utils/mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #F2F6FA;
+}
+
+.wrapper { 
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    flex: 1 1 auto;
+}
+
+
+.container {
+    margin: 0 auto;
+    @include phones{
+        width: 100%;
+        padding: 0 30px;
+    }
+    @include tablets{
+        max-width: 558px;
+    }
+    @include desktops{
+        max-width: 915px;
+    }
+    @include largeDesktops{
+        max-width: 1140px;
+    }
+    @media (max-width: 450px) {
+        width: 100%;
+        padding: 0 20px
+    }
+}
+
+@import 'blocks/header';
+@import 'blocks/list';
+@import 'blocks/nav';
+@import 'blocks/menu';
+@import 'blocks/buttons';
+@import 'blocks/slider';
+@import 'blocks/titles';
+@import 'blocks/descrs';
+@import 'blocks/about';
+@import 'blocks/expertise';
+@import 'blocks/text-block';
+@import 'blocks/services';
+@import 'blocks/people';
+@import 'blocks/job';
+@import 'blocks/footer';

@@ -1,0 +1,140 @@
+.services {
+    @include phones{
+        padding-top: 120px;
+    }
+    @include tablets{
+        padding-top: 140px;
+    }
+    @include desktops{
+        padding-top: 250px;
+    }
+    &__wrapper {
+        display: flex;
+        @include phones{
+            display: block;
+        }
+        @include tablets{
+            justify-content: unset;
+            flex-direction: column;
+        }
+        @include desktops{
+            justify-content: space-between;
+            flex-direction: row;
+        }
+    }
+
+    &__text-block {
+        @include phones{
+            max-width: 280px;
+        }
+        @include tablets{
+            max-width: 264px;
+        }
+        @include desktops{
+            max-width: 292px;
+        }
+        @include largeDesktops{
+            max-width: 362px;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        align-items: start;
+        @include phones{
+            grid-template-columns: repeat(1, 280px);
+            gap: 24px;
+            justify-content: center;
+            margin-top: 48px;
+        }
+        @media (min-width: 600px){
+            grid-template-columns: repeat(2, 264px);
+            gap: 20px;
+            margin-top: -60px;
+        }
+        @include desktops{
+            grid-template-columns: repeat(2, 214px);
+            gap: 20px;
+            margin-top: -100px;
+        }
+        @include largeDesktops{
+            grid-template-columns: repeat(2, 264px);
+            gap: 30px;
+        }
+    }
+
+    &__card {
+        padding: 32px;
+        min-height: 264px;
+        background: #FFFFFF;
+        @include phones{
+            &:nth-child(1){
+                margin-top: 0%;
+            }
+            &:nth-child(2n){
+                margin-top: 0%;
+            }
+        }
+        @media (min-width: 600px){
+            &:nth-child(1){
+                margin-top: 50%;
+            }
+            &:nth-child(2n){
+                margin-top: -50%;
+            }
+            &:nth-child(2){
+                margin-top: 0;
+            }
+        }
+        box-shadow: 0px 21px 45px -8px
+         rgba(37, 41, 49, 0.003);
+        border-radius: 16px;
+    }
+
+    &__number {
+        width: 46px;
+        height: 24px;
+        background: rgba(32, 96, 246, 0.1);;
+        color: $main-color;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+
+    &__descr {
+        margin-top: 24px;
+        width: 200px;
+        font-size: 13px;
+    }
+
+    &__btn {
+        margin: 32px 16px 0 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background: $main-color;
+        transition: all 0.2s;
+        @include desktops{
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 22px;
+        text-align: center;
+        color: #334563;
+    }
+}
